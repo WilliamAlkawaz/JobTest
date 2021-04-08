@@ -28,7 +28,7 @@ namespace Project1.Controllers
         }
 
         //Retrieve a category icon
-        private async Task<IActionResult> GetImage(int id)
+        public async Task<IActionResult> GetImage(int id)
         {
             var category = await _context.Categories.FindAsync(id);
             var stream = new MemoryStream(category.PhotoFile);
