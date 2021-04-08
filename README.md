@@ -3,7 +3,7 @@ Programming Assignment
 
 The assignment was completed in C# and targeted for .Net 5. Data Storage was accomplished with Microsoft SQL Server Express. As for the front-end technology, I used combination of Razor and React JS.  
 
-Since a vehicle must be assigned to a category, a one-to-many relationship must be utilized. That means one vehicle can have one category, but one category can have many vehicles. I have utilised code first approach in Entity Framework Core to achieve this. Careful design is required to achieve the one-to-many approach and to prevent cascade delete (in case of on category is deleted we do not want to delete the corresponding vehicles).
+Since a vehicle must be assigned to a category, a one-to-many relationship must be utilized. That means one vehicle can have one category, but one category can have many vehicles. I have utilised code first approach in Entity Framework Core to achieve this. Careful design is required to achieve the one-to-many approach and to prevent cascade delete (in case of one category is deleted we do not want to delete the corresponding vehicles).
 
 I have created requirements regarding the fields of the Vehicle’s class where all the fields are required, and the weight field cannot be less than zero and more than 10000. 
 
