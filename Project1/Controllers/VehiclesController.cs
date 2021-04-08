@@ -185,7 +185,7 @@ namespace Project1.Controllers
         }
 
         //Retrieve a category icon
-        private async Task<IActionResult> GetImage(int vehicle_id)
+        public async Task<IActionResult> GetImage(int vehicle_id)
         {
             var vehicle = await _context.Vehicles.FindAsync(vehicle_id);
             try
