@@ -1,0 +1,49 @@
+﻿@model Project1.Models.Vehicle
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Vehicle</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Vehicle_ID" />
+            <div class="form-group">
+                <label asp-for="Owners_Name" class="control-label"></label>
+                <input asp-for="Owners_Name" class="form-control" />
+                <span asp-validation-for="Owners_Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Manufacturer" class="control-label"></label>
+                <select asp-for="Manufacturer" class="form-control" asp-items="Html.GetEnumSelectList<Manufacturer>()"></select>
+                <span asp-validation-for="Manufacturer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Year_of_Manufacture" class="control-label"></label>
+                <input asp-for="Year_of_Manufacture" class="form-control" />
+                <span asp-validation-for="Year_of_Manufacture" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Weight" class="control-label"></label>
+                <input asp-for="Weight" class="form-control" />
+                <span asp-validation-for="Weight" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
