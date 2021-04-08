@@ -11,7 +11,7 @@ When the application runs, it goes to the vehicles list in which user can create
 
 A private function has been created in the VehicleController to fetch an image of the corresponding category as URI. The function takes the id of the Vehicle and returns IActionResult where it can be assigned immediately to the “src” attribute of “img” tag. 
 
-As for the Categories, MVC is utilized to view only the list of the available categories. Much of the functionality related to the categories is done using the “CategoriesApiController” as a back-end API and React JS for the front-end. React JS displays the categories in cards, each category in a card, with buttons and edit and delete. The categories are sorted based on their minimum value. 
+As for the Categories, MVC is utilized to view only the list of the available categories. Much of the functionality related to the categories is done using the “CategoriesApiController” as a back-end API and React JS for the front-end. React JS displays the categories in cards, each category in a card, with buttons for edit, delete, and cancel edit. The categories are sorted based on their minimum value. 
 
 Since working with the categories requires many constraints, such as no gap, no overlap, etc., I have created the following steps with simple algorithms to avoid gaps and overlaps when add, delete, and edit. 
 
